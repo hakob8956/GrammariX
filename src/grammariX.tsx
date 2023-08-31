@@ -72,6 +72,11 @@ export default function Command() {
         title: "Cannot execute command",
         message: String(error),
       });
+
+      setState((previous) => ({
+        ...previous,
+        isLoading: false,
+      }));
     }
   }
 
